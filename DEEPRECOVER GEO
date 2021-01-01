@@ -1,0 +1,155 @@
+#!/bin/bash
+while true
+do
+clear
+#### HEAD########################################################################
+echo "                            
+                                  WWW.CYBSECGROUP.COM  
+
+       Tools For Recover Your Image, Music, Video, Files, Documets and ....
+
+            Recomended Debian Distributions From  "GEORGIAN GUYS"
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>|
+                                                                                  |
+   '||''|.                              ..|'''.|                                  |
+    ||   ||    ....    ....  ... ...  .|'     '    ...   .... ...   ....  ... ..  |
+    ||    || .|...|| .|...||  ||'  || ||         .|  '|.  '|.  |  .|...||  ||' '' |
+    ||    || ||      ||       ||    | '|.      . ||   ||   '|.|   ||       ||     |
+   .||...|'   '|...'  '|...'  ||...'   ''|....'   '|..|'    '|     '|...' .||.    |
+                              ||                                                  |
+                             ''''                                                 |
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>|
+                    
+
+                     Forensics \e[93mVersion: 1.0\e[0m 
+
+
+     [\e[91m-------------------------------------------------\e[0m]
+     [\e[91m---\e[0m]          Author: CYBSECGROUP            [\e[91m---\e[0m]
+     [\e[91m---\e[0m]       Tool Information Security         [\e[91m---\e[0m]
+     [\e[91m-------------------------------------------------\e[0m]
+     [\e[91m---\e[0m]           ..:.:\e[96mInstruction\e[0m:.:..       
+     [\e[91m-------------------------------------------------\e[0m]
+     [\e[91m---\e[0m]   \e[91m1\e[0m) \e[96mRecover Information From USB Flash/SD\e[0m     
+     [\e[91m---\e[0m]   \e[91m2\e[0m) \e[96mRecover Information From CD/DVD RW\e[0m        
+     [\e[91m---\e[0m]   \e[91m3\e[0m) \e[96mRecover Information From Browser\e[0m      
+     [\e[91m---\e[0m]   \e[91m4\e[0m) \e[96mHelp\e[0m                                       
+     [\e[91m---\e[0m]   \e[91m5\e[0m) \e[96mUpdate\e[0m                                 
+     [\e[91m---\e[0m]   \e[91mX\e[0m) \e[96mExit\e[0m                                     
+     [\e[91m-------------------------------------------------
+     [\e[91m„\e[0m           Cyber Security Group - C.S.G         \e[91m“
+"
+
+#### PROMPT###############################################################
+
+     echo -n "\e[91m Select:~$ \e[0m"
+read anwser
+case "$anwser" in
+
+#MENU#### AUTO############################################################
+
+1) echo -n "[\e[91m-------------------------------------------------\e[0m]
+\e[33mAfter Connect USB ENTER\e[0m
+[\e[91m-------------------------------------------------\e[0m]" && 
+sleep 10 && 
+echo "\e[33mCode Activation...\e[0m
+[\e[91m-------------------------------------------------\e[0m]" && 
+mkdir CYBSECrecoverUsb && 
+echo "\e[33mCreating Folder CYBSECForensics...\e[0m
+[\e[91m-------------------------------------------------\e[0m]" && 
+cd CYBSECrecoverUsb &&  
+dir /dev/sdb && 
+echo "\e[33mloading...\e[0m
+[\e[91m-------------------------------------------------\e[0m]" &&
+echo -n "-_*/write name/>"
+read name 
+xterm -e dcfldd if=/dev/sdb of="$name".dd && 
+echo "\e[33mfiles seen...\e[0m
+[\e[91m-------------------------------------------------\e[0m]" && 
+mkdir MetaDataxD && 
+cd MetaDataxD && 
+echo "\e[33mloading ...\e[0m
+[\e[91m-------------------------------------------------\e[0m]" && 
+xterm -e foremost -a -T -i ../$name.dd && 
+echo "\e[33m Information save \e[91m$PWD/CYBSECGROUP/MetaDataxD\e[0m in forlder
+AUTHOR Cybsecgroup \e[0m
+[\e[91m-------------------------------------------------\e[0m]" ;;
+
+#### MANUAL###############################################################
+
+2) echo "[\e[91m-------------------------------------------------\e[0m]
+\e[33mLoading 5min...\e[0m"
+sleep 10 && 
+echo "[\e[91m-------------------------------------------------\e[0m]
+\e[33mActivated...\e[0m" && 
+mkdir CYBSECrecoverHDD && 
+echo "[\e[91m-------------------------------------------------\e[0m]
+\e[33mMaked Folder CYBSECGROUP\e[0m" && 
+cd CYBSECrecoverHDD &&
+echo "[\e[91m-------------------------------------------------\e[0m]
+\e[33mDisk List...\e[0m"
+echo "[\e[91m-------------------------------------------------\e[0m]" &&
+dir /dev/sd* |grep "/dev/sd*" --color&&
+echo "[\e[91m-------------------------------------------------\e[0m]" &&
+fdisk -l | grep "/dev/sd*" --color &&
+echo -n "Select List Disk. EX:(/dev/sda* or /dev/sdb*): "
+read sd
+echo "\e[33mLoading...\e[0m
+[\e[91m-------------------------------------------------\e[0m]"
+echo -n "-_*/write name/>"
+read namee
+xterm -e dcfldd if=$sd of=$namee.dd
+echo "\e[33mFiles Seen...\e[0m
+[\e[91m-------------------------------------------------\e[0m]" && 
+mkdir MetaDataxD && 
+cd MetaDataxD && 
+echo "\e[33mselect format. EX: exe,jpg,php,txt,rar & etc.\e[0m
+[\e[91m-------------------------------------------------\e[0m]" && 
+echo -n "-_*/Select format/>"
+read choose
+echo "\e[33mloading....\e[0m
+[\e[91m-------------------------------------------------\e[0m]" && 
+xterm -e foremost -T -t $choose -i ../$namee.dd && 
+echo "\e[33m Save in $PWD/CYBSECGROUP/MetaDataxD Folder 
+From GEORGIA \e[0m
+[\e[91m-------------------------------------------------\e[0m]" 
+ ;;
+
+### Browser################################################################
+
+3) echo "[\e[91m-------------------------------------------------\e[0m]
+Loading File...
+[\e[91m-------------------------------------------------\e[0m]" && cp -r /root/.mozilla/firefox/ HistoryCache &&echo "Find File
+[\e[91m-------------------------------------------------\e[0m]" && echo "Loading...
+[\e[91m-------------------------------------------------\e[0m]" && mv HistoryCache/*.default/ Log && rm -r HistoryCache && echo -n "Select type:"  
+echo "--All | --Cookies | --Permissions | --Downloads | --Forms | --History | --Bookmarks | --Passwords | --Session | --Watch"
+read logs
+dumpzilla 'Log' $logs;;
+
+#### EXIT##################################################################
+
+X) exit ;;
+
+#### HELP##################################################################
+
+4) echo "\e[96m - BETA Version V1.0
+
+USB Flash, CD/DVD RW, Browser Information Recover
+           
+1) Inf Recover from USB/Flash Drive
+2) Inf Recover from CD/DVD RW
+3) Inf Recover from browser
+4) Help
+5) Update                                                            
+X) Exit CYBSECGROUP CMD                            \e[0m" ;;
+5) echo "Loading... Update" && 
+sleep 3 && 
+xterm -e git clone https://github.com/CYBSECGROUP/DEEPRECOVER.git ;;
+esac 
+
+#### RELOAD#################################################################
+
+echo "\e[91m---------------> Click Enter\e[0m"
+read input
+done
